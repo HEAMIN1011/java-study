@@ -12,10 +12,10 @@ public class Quiz02 {
 //		int num = 10;
 //		System.out.println( _______);
 		
-		int num = 0;
-
-		String result = (num <0 ) ? "음수" : ( num > 0) ? "양수" :(num==0)?  "0" : "";
-		System.out.println(result);
+//		int num = 0;
+//
+//		String result = (num <0 ) ? "음수" : ( num > 0) ? "양수" :(num==0)?  "0" : "";
+//		System.out.println(result);
 //
 //		//2번. 아래와 같이 프로그램이 진행되면서 숫자 2개를 입력받고 각각의 결과를 출력하세요.
 //		// ㅇ 모양은 사용자가 입력한 숫자와 계산된 결과입니다.
@@ -25,7 +25,7 @@ public class Quiz02 {
 //		두번째 숫자를 입력하세요 : ㅇ
 //		입력한 숫자=ㅇ
 //
-//		더하기 : ㅇ+ㅇ=ㅇ
+//		더하기 : ㅇ+ㅇ=ㅇㄱㅇ
 //		뺴기 : ㅇ-ㅇ=ㅇ
 //		곱하기 : ㅇ*ㅇ=ㅇ
 //		나누기 : ㅇ/ㅇ=ㅇ
