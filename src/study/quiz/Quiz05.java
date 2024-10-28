@@ -5,47 +5,128 @@ public class Quiz05 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//5x5 사이즈의 2차원 배열에 다음과 같이 값을 저장하고, 출력하는 코드를 작성하시오.
-		//규칙 찾아보기.
-		/*
-		1 2 2 2 2
-		3 1 2 2 2
-		3 3 1 2 2
-		3 3 3 1 2
-		3 3 3 3 1
-		*/
-		
-		int [][]arr = new int [5][5];
-		
-		//기본값 : 0
-		
-		//값을 저장하는 단계
-		for(int i=0; i<5; i++) {
-			//i : 0~4
-			for(int j=0; j<5; j++) {
-				//j: 0~4
-				if(i>j) {
-					arr[i][j] = 3;
-				} else if(i<j) {
-					arr[i][j] = 2;
-				} else {
-					arr[i][j] = 1;
-				}
-			}
-		}
-		
-		//출력하는 단계
-		for(int i=0; i<5; i++) {
-			//i : 0~4
-			for(int j=0; j<5; j++) {
-				//j: 0~4
-				System.out.print(arr[i][j] + " ");
-				}
-				System.out.println();
-			}
-		}
-		
-		
-	}
+	
+	/*
+	//2차원 배열과 인덱스 조정하기.
+	//2차원 배열을 활용하여 다음 결과가 나오도록 코드를 작성하시오.
+	1.
+	(i*4)+(j+1)
+	1 2 3 4
+	5 6 7 8
+	9 10 11 12
+	13 14 15 16
 
+	2.
+	(i+1)+(j*4)
+	1 5 9 13
+	2 6 10 14
+	3 7 11 15
+	4 8 12 16
+
+	3.
+	16-(i*4)-j
+	16 15 14 13
+	12 11 10 9
+	8 7 6 5
+	4 3 2 1
+
+	4.
+	
+	16 12 8 4
+	15 11 7 3
+	14 10 6 2
+	13 9 5 1
+	*/
+	
+	
+	
+
+	int[][] arr = new int[4][4];
+	int num = 1;
+	
+	/*  //1
+	for(int i=0; i<4; i++) {
+		for(int j=0; j<4; j++) {
+			//4*4 
+			//i:0~3	0	1	2	3
+			//j:0~3	0123012301230123
+			arr[i][j] = num;
+			num++;
+		}
+	}
+	*/
+	
+	/*//2
+	for(int j=0; j<4; j++) {	//j:0
+		for(int i=0; i<4; i++) {	//i:0123
+			//4*4 
+			//i:0~3	0	1	2	3
+			//j:0~3	0123012301230123
+			arr[i][j] = num;
+			num++;
+		}
+	}
+	
+	for(int i=0; i<4; i++) {	//i:0123
+		for(int j=0; j<4; j++) {	//j:0
+			arr[j][i] = num;
+			num++;
+		}
+	}
+	
+	for(int i=0; i<4; i++) {	//i:0123
+		for(int j=0; j<4; j++) {	//j:0
+			arr[i][j] = (i+1) + (4*j);
+		}
+	}
+	*/
+	
+	
+	/*
+	//3
+//	num = 16;
+//	for(int i=0; i<4; i++) {
+//		for(int j=0; j<4; j++) {
+//			arr[i][j] = num;
+//			num--;
+//		}
+//	}
+	
+	num = 1;
+	for(int i=3; i>=0; i--) {
+		for(int j=3; j>=0; j--) {
+			arr[i][j] = num;
+			num++;
+		}
+	}
+	*/
+	
+	//4
+	num = 1;
+	for(int i=3; i>=0; i--) {
+		for(int j=3; j>=0; j--) {
+			arr[j][i] = num;
+			num++;
+		}
+	}
+	
+	num = 16;
+	for(int i=0; i<4; i++) {	//i:0123
+		for(int j=0; j<4; j++) {	//j:0
+			arr[j][i] = num;
+			num--;
+		}
+	}
+	
+	for(int i=0; i<4; i++) {
+		for(int j=0; j<4; j++) {
+			System.out.printf("%3d", arr[i][j]);
+		}
+		System.out.println();
+	}
+}
+}
+
+	
+	
 
