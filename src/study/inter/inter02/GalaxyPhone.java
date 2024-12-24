@@ -1,0 +1,18 @@
+package study.inter.inter02;
+
+public class GalaxyPhone implements Callable, Connectable {
+	int callStatus;
+	
+	@Override
+	public void call() {
+		System.out.println("갤럭시 전화 검");
+		callStatus = Callable.CALL_ON;
+	}
+
+	@Override
+	public void connect() {
+		System.out.println("갤럭시 블루투스 연결");
+		
+	}
+	
+}
