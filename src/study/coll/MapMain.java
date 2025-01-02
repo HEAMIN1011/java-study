@@ -2,6 +2,7 @@ package study.coll;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MapMain {
 
@@ -29,6 +30,15 @@ public class MapMain {
 		Map<String, String> map2 = new HashMap<String, String>();
 		map2.put("당번", "지각생");
 		System.out.println(map2.get("당번"));
+		
+		//
+		
+		Set<Integer> map1Key = map1.keySet();
+		//map1key.iterator()
+		
+		for(Integer key : map1.keySet()) {
+			System.out.println(key);
+		}
 		
 		
 	}
