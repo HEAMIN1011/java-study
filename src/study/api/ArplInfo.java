@@ -3,11 +3,18 @@ package study.api;
 public class ArplInfo {
 
 	/*
-	 * CREATE TABLE ARPLINFO ( arplno NUMBER Primary key, informCode varchar2(64),
-	 * actionknack varchar2(1024), informCause varchar2(1024), informData
-	 * varchar2(1024), informGrade varchar2(1024), imageUrl1 varchar2(1024) );
+	 * CREATE TABLE ARPLINFO ( arplno NUMBER Primary key,
+	 * informCode varchar2(64),
+	 * actionknack varchar2(1024),
+	 * informCause varchar2(1024),
+	 * informData varchar2(1024), 
+	 * informGrade varchar2(1024), 
+	 * imageUrl1 varchar2(1024) );
 	 * 
-	 * CREATE SEQUENCE arplinfo_pk_seq start with 1 increment by 1 nocycle;
+	 * CREATE SEQUENCE arplinfo_pk_seq
+	 * start with 1
+	 * increment by 1
+	 * nocycle;
 	 */
 
 	int arplNo; // PK 역할 순번
